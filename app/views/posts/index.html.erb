@@ -1,0 +1,25 @@
+
+<h5> <%= notice %></h5>
+<br>
+
+<h1>Index</h1>  
+
+<%= link_to 'Crear nuevo Post', posts_new_path %>
+<br>
+<table>
+	<tr>
+		<th>Titulo</th>
+		<th>Contenido</th>
+	</tr>
+	<% @posts.each do |post| %>
+	<tr>
+		<td><%= post.title %></td>
+		<td><%= post.content %></td>
+		<td><%= link_to 'modificar', edit_post_path(post) %></td>
+		<td><%= link_to 'eliminar', destroy_post_path(post), method: :delete %></td>
+	</tr>
+	<% end  %>
+</table>
+
+
+

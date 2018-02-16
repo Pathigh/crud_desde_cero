@@ -1,0 +1,10 @@
+<h3>Detalle del Post</h3>
+
+<p>
+	<strong>Titulo</strong> <%= @post.title %> 	<br>
+	<strong>Contenido</strong> <%= @post.content %> <br>
+
+</p>
+
+<%= link_to 'Volver al Index', root_path %>
+<%= link_to 'modificar', edit_post_path(@post) %>
